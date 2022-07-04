@@ -113,28 +113,49 @@ body {
 .nav-item a:focus {
   color: #2196f3;
 }
-.header-address {
-  display: flex;
+.header-contact-list {
+  display: inline-flex;
+  align-items: center;
 }
 .header-address-link {
   color: #757575;
   text-decoration: none;
   font-family: inherit;
 }
-.header-address-link:not(:last-child) {
+.header-contact-item:not(:last-child) {
   margin-right: 50px;
 }
 .header-address-link:hover,
 .header-address-link:focus {
   color: #2196f3;
 }
+.header-address-icon-mail {
+  fill: #757575;
+  margin-right: 10px;
+}
+.header-address-icon-tel {
+  width: 10px;
+  height: 16px;
+  fill: #757575;
+  margin-right: 10px;
+}
+.header-address-link:hover .icon,
+.header-address-link:focus .icon {
+  fill: #2196f3;
+}
 /* main */
 .hero {
   background-color: #2f303a;
-  background-image: url(../images/main/hero-bgd.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main/hero-bgd.jpg);
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
+  background-size: 1600px 600px;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -153,6 +174,7 @@ body {
   color: #fff;
   font-weight: 700;
   line-height: 1.9;
+  letter-spacing: 0.06em;
   font-family: inherit;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -165,6 +187,12 @@ body {
   cursor: pointer;
 }
 /* specialty */
+.specialty-icon-container {
+  padding: 25px 100px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 .specialty-list {
   display: flex;
   padding-left: 0;
@@ -172,7 +200,7 @@ body {
 .specialty-list-item:not(:last-child) {
   margin-right: 50px;
 }
-.specialty-list-item-titel {
+.specialty-list-item-title {
   color: #212121;
   font-weight: 700;
   font-size: 14px;
@@ -216,7 +244,6 @@ body {
 }
 .team-list-item-text {
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 .team-member {
   color: #212121;
@@ -234,6 +261,55 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 0;
 }
+.team-social {
+  padding: 16px 32px 30px;
+}
+.team-social-list {
+  display: flex;
+}
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-social-link {
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  fill: #afb1b8;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background: #2196f3;
+  fill: #fff;
+}
+/* client list */
+.client-list {
+  display: flex;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+.client-link:hover,
+.client-link:focus {
+  color: #2196f3;
+  border-color: #2196f3;
+}
+.client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-icon {
+  fill: currentColor;
+}
 /* footer */
 .footer {
   background-color: #2f303a;
@@ -243,7 +319,11 @@ body {
 }
 .footer-content {
   display: flex;
+}
+.footer-main {
+  display: flex;
   flex-direction: column;
+  margin-right: 70px;
 }
 .logo-footer {
   color: #fff;
@@ -285,11 +365,48 @@ body {
 .footer-address:focus {
   color: #2196f3;
 }
+
+/*footer social */
+
+.footer-social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+.social-list {
+  display: flex;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: #2196f3;
+}
+.social-link-icon {
+  fill: #fff;
+}
+
 /* portfolio */
 .portfolio {
   background-color: #eee;
   border: 1px;
 }
+
 /* filters */
 .filters {
   display: flex;
@@ -342,6 +459,12 @@ body {
   flex-basis: calc(100% / 3 -30px);
   margin-top: 30px;
   margin-left: 30px;
+}
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .project-title {
